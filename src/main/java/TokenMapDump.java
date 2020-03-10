@@ -87,6 +87,8 @@ public class TokenMapDump {
         DatabaseDescriptor.setEndpointSnitch(snitch);
         TokenMetadata metadata = new TokenMetadata();
 
+        // NOTE: Topology defined in: resources/cassandra-topology.properties
+
         addToken(metadata, TOKENS[0], new byte[]{ 1, 0, 0, 0 });
         addToken(metadata, TOKENS[1], new byte[]{ 2, 0, 0, 0 });
         addToken(metadata, TOKENS[2], new byte[]{ 3, 0, 0, 0 });
